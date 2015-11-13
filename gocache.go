@@ -33,6 +33,7 @@ func cache(key string, oldVal string, newVal string) {
 		if _, found := currBlock.store[key]; !found {
 			currBlock.store[key] = oldVal
 		}
+		// Empty string values are always found, so will never be cached
 		if _, found := currBlock.count[oldVal]; !found {
 			currBlock.count[oldVal] = count[oldVal]
 		}
