@@ -141,6 +141,8 @@ Loop:
 			commit()
 		case "END":
 			break Loop
+		case "":
+			continue Loop
 		default:
 			fmt.Println("INVALID COMMAND")
 		}
